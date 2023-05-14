@@ -1,9 +1,72 @@
+:root {
+  --primary: rgb(44, 235, 235);
+  --bg: rgb(252, 253, 255);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
   min-height: 2000px;
+  font-family: "Poppins", sans-serif;
+}
+.navbar .container ul li a {
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 0.5rem;
+}
+.navbar .container ul li a:hover {
+  font-size: 1.3rem;
+  color: rgb(8, 92, 84);
+}
+.navbar .container ul li a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
 }
 .jumbotron {
   padding-top: 5rem;
+  font-size: 3rem;
+  /* font-weight: 700; */
   background-color: rgb(252, 253, 255);
+}
+.jumbotron .container {
+  display: flex;
+  align-items: center;
+}
+.jumbotron .container .card .card-body p {
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.jumbotron .container .card .card-body h5 {
+  font-size: 1.5rem;
+  color: rgb(21, 21, 47);
+}
+.jumbotron .container .card .card-body .card-text {
+  font-size: 1.5rem;
+  color: rgb(21, 21, 47);
+}
+.jumbotron .container .card .card-body .btn {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+#hamburger-menu {
+  display: none;
+}
+.navbar .container ul li a {
+  color: #fff;
 }
 #project {
   background-color: #84e7d5;
@@ -15,4 +78,21 @@ section {
 .card img {
   width: 160px;
   height: 160px;
+}
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
 }
