@@ -18,7 +18,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 .navbar .container ul li a {
-  display: inline-block;
+  /* display: inline-block; */
   font-size: 1.1rem;
   margin: 0 0.5rem;
 }
@@ -36,17 +36,20 @@ body {
 }
 .jumbotron {
   padding-top: 5rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
   /* font-weight: 700; */
   background-color: rgb(252, 253, 255);
 }
-.jumbotron .container {
+.jumbotron .container .row {
   display: flex;
   align-items: center;
+  /* transform: scaleX(-1); */
 }
-.jumbotron .container .card .card-body p {
-  font-size: 5rem;
+
+.jumbotron .container .card .card-body {
+  font-size: 3rem;
   font-weight: 700;
+  max-width: 60%;
   color: var(--primary);
 }
 .jumbotron .container .card .card-body h5 {
@@ -89,6 +92,9 @@ section {
 @media (max-width: 758px) {
   html {
     font-size: 62.5%;
+  }
+  .jumbotron .container .card .row .card-body {
+    font-size: 1rem;
   }
 }
 @media (max-width: 450px) {
